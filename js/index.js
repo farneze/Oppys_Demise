@@ -175,7 +175,7 @@ window.onload = () => {
 
     gameScript.score();
     gameScript.reqAnimation = window.requestAnimationFrame(gameLoop);
-
+    con(player.reachStart);
     // Game rules
     if (player.reachStart) {
       // Obstacle creation mechanic
@@ -340,7 +340,6 @@ window.onload = () => {
       this.reqAnimation2 = window.requestAnimationFrame(this.gameOver);
     },
     gameOver: function () {
-      player.reachStart = true;
       this.width = gameScript.canvas.width;
       this.height = gameScript.canvas.height;
 
@@ -712,7 +711,7 @@ window.onload = () => {
   //
   document.onkeydown = function (e) {
     const step = 50;
-    if (!player.reachStart) {
+    if (player.reachStart) {
       if (e.keyCode == 38) {
         player.targetY = player.y - step;
       }
@@ -725,9 +724,9 @@ window.onload = () => {
       if (e.keyCode == 83) {
         player.targetY = player.y + step;
       }
-      if (e.keyCode == 82) {
-        gameScript.restartGame();
-      }
+    }
+    if (e.keyCode == 82) {
+      gameScript.restartGame();
     }
 
     if (e.keyCode == 77) {
