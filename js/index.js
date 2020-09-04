@@ -262,7 +262,7 @@ window.onload = () => {
       seconds = Math.floor((this.frames / 60) % 60);
       minutes = Math.floor(this.frames / 3600);
 
-      ctx.font = "24px DOS437";
+      ctx.font = "24px dos437";
       // ctx.fillStyle = '#0f6'
       ctx.fillStyle = "#00FF00";
       if (this.frames / 3600 >= 1) {
