@@ -1,10 +1,10 @@
 @font-face {
-  font-family: "dos437";
-  src: url("../fonts/dos437.ttf");
+  font-family: "DOS437";
+  src: url("../fonts/DOS437.ttf");
 }
 
 body {
-  font-family: "dos437";
+  font-family: "DOS437";
   padding: 0;
   text-align: center;
 }
@@ -44,7 +44,7 @@ button {
   width: 200px;
   height: 75px;
   font-size: 30px;
-  font-family: "dos437";
+  font-family: "DOS437";
   background-color: #8e5028;
   color: #fff;
   padding: 20px 40px;

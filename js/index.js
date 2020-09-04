@@ -83,18 +83,10 @@ window.onload = () => {
     redZone5 = new Storm(-125, 204.2, 0.5, 0.5, "./images/bigcloud1.png");
 
     gameScript.start();
-    //               |
-    //       |-------|
-    //       V
-    // timedStart();
 
     gameScript.componentsPosY = [];
     gameScript.obstaclesArray = [];
   }
-
-  //   function timedStart() {
-  //     let test = setTimeout(gameScript.start, 1000);
-  //   }
 
   function gameLoop() {
     gameScript.clear();
@@ -262,7 +254,7 @@ window.onload = () => {
       seconds = Math.floor((this.frames / 60) % 60);
       minutes = Math.floor(this.frames / 3600);
 
-      ctx.font = "24px dos437";
+      ctx.font = "24px DOS437";
       // ctx.fillStyle = '#0f6'
       ctx.fillStyle = "#00FF00";
       if (this.frames / 3600 >= 1) {
