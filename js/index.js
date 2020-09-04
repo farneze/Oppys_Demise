@@ -340,6 +340,7 @@ window.onload = () => {
       this.reqAnimation2 = window.requestAnimationFrame(this.gameOver);
     },
     gameOver: function () {
+      player.reachStart = true;
       this.width = gameScript.canvas.width;
       this.height = gameScript.canvas.height;
 
