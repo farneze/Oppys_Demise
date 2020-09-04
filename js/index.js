@@ -719,17 +719,22 @@ window.onload = () => {
   //
   document.onkeydown = function (e) {
     const step = 50;
-    if (e.keyCode == 38) {
-      player.targetY = player.y - step;
-    }
-    if (e.keyCode == 87) {
-      player.targetY = player.y - step;
-    }
-    if (e.keyCode == 40) {
-      player.targetY = player.y + step;
-    }
-    if (e.keyCode == 83) {
-      player.targetY = player.y + step;
+    if (!player.reachStart) {
+      if (e.keyCode == 38) {
+        player.targetY = player.y - step;
+      }
+      if (e.keyCode == 87) {
+        player.targetY = player.y - step;
+      }
+      if (e.keyCode == 40) {
+        player.targetY = player.y + step;
+      }
+      if (e.keyCode == 83) {
+        player.targetY = player.y + step;
+      }
+      if (e.keyCode == 82) {
+        gameScript.restartGame();
+      }
     }
 
     if (e.keyCode == 77) {
@@ -742,9 +747,7 @@ window.onload = () => {
       }
     }
     // DEBUG ONLY
-    // if (e.keyCode == 82) {
-    // gameScript.restartGame();
-    // }
+    //
     // if (e.keyCode == 37) {
     // gameScript.stop();
     // <---- Arrow
