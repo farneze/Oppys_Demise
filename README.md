@@ -67,7 +67,7 @@ This is its final moments before the storm...
 - Dodge **obstacles** to avoid being dragged inside the **light storm** or the **heavy storm**
 - If you are dragged by rock, again, try to **dodge** it and the rover will **speed up** to reach its starting position
 - Staying inside the **light storm** makes it **difficult to see** where the rover is, while it also **drains the battery**. _No **sun**, no **battery**._
-- Touch **heavy storm** and it's game over. _No **light storm**, no **chance**._
+- Touch **heavy storm** and it's game over. _No **battery**, no **chance**._
 
 #### The HUD - Heads Up Displayd
 
