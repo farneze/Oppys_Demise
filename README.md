@@ -4,7 +4,7 @@
 
 ![Start Screen](./images/readme.jpg)
 
-Click [HERE](https://https://farneze.github.io/Project-IronHack-Game/) to play **Oppy's Demise**
+Click [HERE](https://farneze.github.io/Oppys_Demise/) to play **Oppy's Demise**
 
 ---
 
