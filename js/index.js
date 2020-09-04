@@ -418,6 +418,8 @@ window.onload = () => {
     // drawFinalPoints: function () {},
     restartGame: function () {
       soundBoard.stopBGM();
+      gameScript.gameSpeed = 1;
+      gameScript.oldGameSpeed = 1;
       window.cancelAnimationFrame(gameScript.reqAnimation);
       document.getElementById("menu").style.display = "flex";
       document.getElementById("game-board").style.display = "none";
