@@ -11,15 +11,15 @@ window.onload = () => {
     if (musicType.innerHTML == "BGM") {
       musicType.innerHTML = "Funny";
       soundBoard.mood = "Funny";
-      soundBoard.bgm.src = "/audio/Rock Around the Clock-Bill Haley.m4a";
+      soundBoard.bgm.src = "./audio/Rock Around the Clock-Bill Haley.m4a";
     } else if (musicType.innerHTML == "Sad") {
       musicType.innerHTML = "BGM";
       soundBoard.mood = "BGM";
-      soundBoard.bgm.src = "/audio/Start_Kornephoros.mp3";
+      soundBoard.bgm.src = "./audio/Start_Kornephoros.mp3";
     } else {
       musicType.innerHTML = "Sad";
       soundBoard.mood = "Sad";
-      soundBoard.bgm.src = "/audio/David Bowie – Space Oddity.ogg";
+      soundBoard.bgm.src = "./audio/David Bowie – Space Oddity.ogg";
     }
   };
 
@@ -29,13 +29,13 @@ window.onload = () => {
 
   function gamePreparation() {
     if (soundBoard.mood == "Funny") {
-      soundBoard.bgm.src = "/audio/I Will Survive - Gloria Gaynor.mp3";
+      soundBoard.bgm.src = "./audio/I Will Survive - Gloria Gaynor.mp3";
     }
     if (soundBoard.mood == "BGM") {
-      soundBoard.bgm.src = "/audio/Game_Space-Debris.mp3";
+      soundBoard.bgm.src = "./audio/Game_Space-Debris.mp3";
     }
     if (soundBoard.mood == "Sad") {
-      soundBoard.bgm.src = "/audio/Kansas - Dust in the wind.mp3";
+      soundBoard.bgm.src = "./audio/Kansas - Dust in the wind.mp3";
     }
     soundBoard.src;
     document.getElementById("menu").style.display = "none";
@@ -47,40 +47,40 @@ window.onload = () => {
     //startGame
     // player.y = (floor.height - this.height) / 2 + background.height
     // player.x = (gameScript.canvas.width - this.width) * 0.8);
-    ending = new Ending(0, 0, 1, 1, "/images/ending.png");
+    ending = new Ending(0, 0, 1, 1, "./images/ending.png");
 
     // Player Sprites
-    player = new Player(0, 230, 0.4, 0.4, "/images/rover.png");
-    tireSmoke1 = new Smoke(400, 200, 0.2, 0.2, "/images/roversmoke1.png", 0);
-    tireSmoke2 = new Smoke(400, 200, 0.2, 0.2, "/images/roversmoke2.png", 0);
-    tireSmoke3 = new Smoke(400, 200, 0.2, 0.2, "/images/roversmoke3.png", 0);
+    player = new Player(0, 230, 0.4, 0.4, "./images/rover.png");
+    tireSmoke1 = new Smoke(400, 200, 0.2, 0.2, "./images/roversmoke1.png", 0);
+    tireSmoke2 = new Smoke(400, 200, 0.2, 0.2, "./images/roversmoke2.png", 0);
+    tireSmoke3 = new Smoke(400, 200, 0.2, 0.2, "./images/roversmoke3.png", 0);
 
     // Background Scenery
-    sky = new Background(0, 0, 0.5, 0.4, "/images/sky.png", 0);
-    clouds = new Background(0, 100, 0.1, 0.1, "/images/cloudsbn.png", 3);
-    mountainFront = new Background(0, 0, 1, 1, "/images/bckgndFront.png", 1.5);
-    mountainMid = new Background(0, 0, 1, 1, "/images/bckgndMid.png", 0.75);
-    mountainBack = new Background(0, 0, 1, 1, "/images/bckgndBack.png", 0.3);
-    floor = new Background(0, 114, 0.25, 0.25, "/images/terrain.png", 5);
+    sky = new Background(0, 0, 0.5, 0.4, "./images/sky.png", 0);
+    clouds = new Background(0, 100, 0.1, 0.1, "./images/cloudsbn.png", 3);
+    mountainFront = new Background(0, 0, 1, 1, "./images/bckgndFront.png", 1.5);
+    mountainMid = new Background(0, 0, 1, 1, "./images/bckgndMid.png", 0.75);
+    mountainBack = new Background(0, 0, 1, 1, "./images/bckgndBack.png", 0.3);
+    floor = new Background(0, 114, 0.25, 0.25, "./images/terrain.png", 5);
 
     // Storm sprites
-    orangeZone1 = new Storm(40, 75, 0.5, 0.5, "/images/smlcloud.png");
-    orangeZone2 = new Storm(40, 122, 0.5, 0.5, "/images/smlcloud.png");
-    orangeZone3 = new Storm(40, 169, 0.5, 0.5, "/images/smlcloud.png");
-    orangeZone4 = new Storm(40, 216, 0.5, 0.5, "/images/smlcloud.png");
-    orangeZone5 = new Storm(40, 263, 0.5, 0.5, "/images/smlcloud.png");
-    orangeZone6 = new Storm(40, 310, 0.5, 0.5, "/images/smlcloud.png");
-    orangeZone7 = new Storm(100, 75, 0.5, 0.5, "/images/smlcloud.png");
-    orangeZone8 = new Storm(100, 122, 0.5, 0.5, "/images/smlcloud.png");
-    orangeZone9 = new Storm(100, 169, 0.5, 0.5, "/images/smlcloud.png");
-    orangeZone10 = new Storm(100, 216, 0.5, 0.5, "/images/smlcloud.png");
-    orangeZone11 = new Storm(100, 263, 0.5, 0.5, "/images/smlcloud.png");
-    orangeZone12 = new Storm(100, 310, 0.5, 0.5, "/images/smlcloud.png");
-    redZone1 = new Storm(-125, 0, 0.5, 0.5, "/images/bigcloud1.png");
-    redZone2 = new Storm(-125, 51.4, 0.5, 0.5, "/images/bigcloud2.png");
-    redZone3 = new Storm(-125, 102.8, 0.5, 0.5, "/images/bigcloud1.png");
-    redZone4 = new Storm(-125, 153.6, 0.5, 0.5, "/images/bigcloud2.png");
-    redZone5 = new Storm(-125, 204.2, 0.5, 0.5, "/images/bigcloud1.png");
+    orangeZone1 = new Storm(40, 75, 0.5, 0.5, "./images/smlcloud.png");
+    orangeZone2 = new Storm(40, 122, 0.5, 0.5, "./images/smlcloud.png");
+    orangeZone3 = new Storm(40, 169, 0.5, 0.5, "./images/smlcloud.png");
+    orangeZone4 = new Storm(40, 216, 0.5, 0.5, "./images/smlcloud.png");
+    orangeZone5 = new Storm(40, 263, 0.5, 0.5, "./images/smlcloud.png");
+    orangeZone6 = new Storm(40, 310, 0.5, 0.5, "./images/smlcloud.png");
+    orangeZone7 = new Storm(100, 75, 0.5, 0.5, "./images/smlcloud.png");
+    orangeZone8 = new Storm(100, 122, 0.5, 0.5, "./images/smlcloud.png");
+    orangeZone9 = new Storm(100, 169, 0.5, 0.5, "./images/smlcloud.png");
+    orangeZone10 = new Storm(100, 216, 0.5, 0.5, "./images/smlcloud.png");
+    orangeZone11 = new Storm(100, 263, 0.5, 0.5, "./images/smlcloud.png");
+    orangeZone12 = new Storm(100, 310, 0.5, 0.5, "./images/smlcloud.png");
+    redZone1 = new Storm(-125, 0, 0.5, 0.5, "./images/bigcloud1.png");
+    redZone2 = new Storm(-125, 51.4, 0.5, 0.5, "./images/bigcloud2.png");
+    redZone3 = new Storm(-125, 102.8, 0.5, 0.5, "./images/bigcloud1.png");
+    redZone4 = new Storm(-125, 153.6, 0.5, 0.5, "./images/bigcloud2.png");
+    redZone5 = new Storm(-125, 204.2, 0.5, 0.5, "./images/bigcloud1.png");
 
     gameScript.start();
     //               |
@@ -332,13 +332,13 @@ window.onload = () => {
       // this.reqAnimation = window.requestAnimationFrame(this.gameOver())
 
       if (soundBoard.mood == "Funny") {
-        soundBoard.bgm.src = "/audio/Portal - Still Alive - Ending.mp3";
+        soundBoard.bgm.src = "./audio/Portal - Still Alive - Ending.mp3";
       }
       if (soundBoard.mood == "BGM") {
-        soundBoard.bgm.src = "/audio/End_Magellanic Clouds.mp3";
+        soundBoard.bgm.src = "./audio/End_Magellanic Clouds.mp3";
       }
       if (soundBoard.mood == "Sad") {
-        soundBoard.bgm.src = "/audio/Way to Fall-pPBHMgc9wVQ.mp3";
+        soundBoard.bgm.src = "./audio/Way to Fall-pPBHMgc9wVQ.mp3";
       }
       this.alpha0 = 0;
       this.alpha1 = 0;
@@ -442,7 +442,7 @@ window.onload = () => {
           y,
           0.1,
           0.1,
-          "/images/boulder1.png",
+          "./images/boulder1.png",
           5 * gameScript.gameSpeed
         )
       );
@@ -453,7 +453,7 @@ window.onload = () => {
           y,
           0.1,
           0.1,
-          "/images/boulder2.png",
+          "./images/boulder2.png",
           5 * gameScript.gameSpeed
         )
       );
@@ -464,7 +464,7 @@ window.onload = () => {
           y,
           0.1,
           0.1,
-          "/images/boulder3.png",
+          "./images/boulder3.png",
           5 * gameScript.gameSpeed
         )
       );
